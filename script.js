@@ -4,8 +4,8 @@
       let UserChoice;
       
       UserChoice = prompt("enter choice(any one of that from Rock , Paper and scissor ) : ");
-       
-      return UserChoice;
+
+      return UserChoice.toLowerCase();
       
   }
    
@@ -13,7 +13,7 @@
   {
     let ComputerChoice;
        
-    let choices = ["rock" , "paper" , "scissor"];
+    let choices = ["rock" , "paper" , "scissors"];
 
     let RandomIndex = Math.floor(Math.random() * choices.length);
 
@@ -39,9 +39,9 @@
          ComputerScore = ComputerScore + 1;
     }
 
-    else if(UserChoice == "Rock" && ComputerChoice == "Scissor" 
+    else if( (UserChoice == "Rock" && ComputerChoice == "Scissors" 
         || UserChoice == "Paper" && ComputerChoice == "Rock" 
-        || UserChoice == "Scissor"&& ComputerChoice == "Paper")
+        || UserChoice == "Scissors"&& ComputerChoice == "Paper") )
         {
             console.log("congratulation! You Won the game");
             UserScore = UserScore + 1;
@@ -71,7 +71,7 @@
   
   let result;
   
-  for(let i = 0; i < 6; i++)
+  for(let i = 0; i < 5; i++)
   {
      const humanSelection = GetHumanChoice();
      const computerSelection = GetComputerChoice();

@@ -86,6 +86,8 @@
         ScoreContainer.style.justifyContent = "space-between";
         ScoreContainer.style.width = "300px";
         ScoreContainer.style.marginTop = "20px";
+        
+         document.body.appenChild(ScoreConatainer);
 
 
         const ComputerRunningScore = document.createElement("div");
@@ -97,12 +99,11 @@
         const Points = document.createElement("div")
          document.body.appendChild(Points)
          Points.style.marginTop = "20px";
-         ScoreContainer.style.marginTop = "10px";
-
-       const Winner = document.createElement("ul");
+        
+       const Winner = document.createElement("div");
        document.body.appendChild(Winner);
         Winner.style.marginTop = "30px";
-        Winner.style.fontweight = "bold";
+        Winner.style.fontWeight = "bold";
         Winner.style.fontSize = "20px";
 
     let result;
@@ -144,17 +145,17 @@
        
       if(ComputerScore > HumanScore)
      {
-         Winner.textContent  = "You lost";      
+         Winner.textContent  = "😢 Computer Wins the Game!";      
      }
 
       else if(ComputerScore == HumanScore)
      {
-          Winner.textContent = "game tie";
+          Winner.textContent = "🤝 game tie";
      }
   
      else
     {
-        Winner.textContent = "You Win"
+        Winner.textContent = "🎉 You Win"
     }
       }
         

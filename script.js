@@ -39,9 +39,9 @@
          ComputerScore = ComputerScore + 1;
     }
 
-    else if( (UserChoice == "Rock" && ComputerChoice == "Scissors" 
-        || UserChoice == "Paper" && ComputerChoice == "Rock" 
-        || UserChoice == "Scissors"&& ComputerChoice == "Paper") )
+    else if( (UserChoice == "rock" && ComputerChoice == "scissors" 
+        || UserChoice == "paper" && ComputerChoice == "rock" 
+        || UserChoice == "scissors"&& ComputerChoice == "paper") )
         {
             console.log("congratulation! You Won the game");
             UserScore = UserScore + 1;

@@ -75,37 +75,40 @@
 
      RockButn.textContent = "Rock";
      PaperButn.textContent = "Paper";
-     ScissorButn.textContent = "Scissors";                    
+     ScissorButn.textContent = "Scissors";  
 
   document.body.appendChild(RockButn);
   document.body.appendChild(PaperButn);
   document.body.appendChild(ScissorButn);
 
+   let round = 0;
+
+while(round < 6)
+{
     RockButn.addEventListener("click" , function()
       {
-          PlayGame("rock");                  
+          round++;
+          PlayGame("rock" , round);                  
       })
 
      PaperButn.addEventListener("click" , function()
        {
-          PlayGame("paper");
+        round++;
+          PlayGame("paper" , round);
        })
 
      ScissorButn.addEventListener("click" , function()
        {
-           PlayGame("scissors");
+          round++;
+           PlayGame("scissors" , round);
        })
-
+}
 
   let result;
 
-     let round = 0;
-
-     while(round != 5)
-     {
-       function PlayGame(humanSelection)
+       function PlayGame(humanSelection , round)
        {
-          round++;
+        
      const computerSelection = GetComputerChoice();
      
      // console.log( "you select : " , humanSelection);
@@ -119,8 +122,7 @@
     HumanScore = result[0];
     ComputerScore = result[1];
         
-       }   
-     }
+       }    
  // final score
  
   if(ComputerScore > HumanScore)

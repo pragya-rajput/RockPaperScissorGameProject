@@ -68,11 +68,13 @@
   
   let HumanScore = 0;
   let ComputerScore = 0;
+
+   const RockButn = document.createElement("button");
+   const PaperButn = documnet.createElement("button");
+   const ScissorButn = document.createElement("button");
   
   let result;
   
-  for(let i = 0; i < 5; i++)
-  {
      const humanSelection = GetHumanChoice();
      const computerSelection = GetComputerChoice();
      
@@ -85,9 +87,7 @@
    
     HumanScore = result[0];
     ComputerScore = result[1];
-    
-  }
-  
+   
  // final score
  
   if(ComputerScore > HumanScore)

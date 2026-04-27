@@ -77,9 +77,9 @@
      PaperButn.textContent = "Paper";
      ScissorButn.textContent = "Scissors";                    
 
-  document.body.appendchild(RockButn);
-  document.body.appendchild(PaperButn);
-  document.body.appendchild(ScissorButn);
+  document.body.appendChild(RockButn);
+  document.body.appendChild(PaperButn);
+  document.body.appendChild(ScissorButn);
 
     RockButn.addEventListener(click , function()
       {

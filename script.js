@@ -23,10 +23,13 @@
    
   function PlayRound( UserScore , ComputerScore , round ,UserChoice , ComputerChoice)
   {
+        if(round >= 6)
+        {
+         console.log("Game Over!);
+            return;         
+        }
+   
       console.log("round : " , round );
-
-   if (round >5)
-    break;
        
       if(ComputerChoice == UserChoice)
     {

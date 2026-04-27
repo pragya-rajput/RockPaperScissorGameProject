@@ -99,7 +99,7 @@
           round++;
            PlayGame("scissors");
        })
-}
+
 
     let result;
     let round = 0;
@@ -152,6 +152,6 @@
   }
       }
         
-        }
+     }
   
        

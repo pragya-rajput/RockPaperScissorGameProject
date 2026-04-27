@@ -21,7 +21,7 @@
     return ComputerChoice;
   }
    
-  function PlayRound( UserScore , ComputerScore , round ,UserChoice , ComputerChoice)
+  function PlayRound( UserScore , ComputerScore , round , UserChoice , ComputerChoice)
   {
    
       console.log("round : " , round );
@@ -101,14 +101,14 @@
     let result;
     let round = 0;
 
-       function PlayGame(humanSelection , round)
+       function PlayGame(humanSelection)
        {
         if(round >= 6)
         {
          console.log("game over");
          return;
         }
-          round ++;
+          round++;
         
          const computerSelection = GetComputerChoice();
      
@@ -127,7 +127,7 @@
 
  // final score
 
-    if(round == 6)
+    if(round === 6)
       {
        
   if(ComputerScore > HumanScore)

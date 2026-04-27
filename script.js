@@ -1,13 +1,13 @@
 
- function GetHumanChoice()
-  {
-      let UserChoice;
+ // function GetHumanChoice()
+ //  {
+ //      let UserChoice;
       
-      UserChoice = prompt("enter choice(any one of that from Rock , Paper and scissor ) : ");
+ //      UserChoice = prompt("enter choice(any one of that from Rock , Paper and scissor ) : ");
 
-      return UserChoice.toLowerCase();
+ //      return UserChoice.toLowerCase();
       
-  }
+ //  }
    
     function GetComputerChoice()
   {
@@ -21,9 +21,9 @@
     return ComputerChoice;
   }
    
-  function PlayRound(i , UserScore , ComputerScore , UserChoice , ComputerChoice)
+  function PlayRound( UserScore , ComputerScore , UserChoice , ComputerChoice)
   {
-      console.log("round : " , i+1);
+      console.log("round : " );
        
       if(ComputerChoice == UserChoice)
     {
@@ -70,20 +70,37 @@
   let ComputerScore = 0;
 
    const RockButn = document.createElement("button");
-   const PaperButn = documnet.createElement("button");
+   const PaperButn = document.createElement("button");
    const ScissorButn = document.createElement("button");
 
-     RockButn.textContent("Rock");
-     PaperButn.textContent("Paper");
-     ScissorButn.textContent("Scissors");                    
+     RockButn.textContent = "Rock";
+     PaperButn.textContent = "Paper";
+     ScissorButn.textContent = "Scissors";                    
 
   document.body.appendchild(RockButn);
   document.body.appendchild(PaperButn);
-  document.body.appemdchild(ScissorButn);
+  document.body.appendchild(ScissorButn);
+
+    RockButn.addEventListener(click , function()
+      {
+          PlayGame("Rock");                  
+      })
+
+     PaperButn.addEventListener(click , function()
+       {
+          PlayGame("Paper");
+       })
+
+     ScissorButn.addEventListener(click , function()
+       {
+           PlayGame("Scissors");
+       })
+
 
   let result;
-  
-     const humanSelection = GetHumanChoice();
+
+       function PlayGame(humanSelection)
+       {
      const computerSelection = GetComputerChoice();
      
      console.log( "you select : " , humanSelection);
@@ -91,11 +108,12 @@
      
       console.log("");
      
-     result = PlayRound(i , HumanScore , ComputerScore , humanSelection , computerSelection);
-   
+     result = PlayRound( HumanScore , ComputerScore , humanSelection , computerSelection);
+       }
+
     HumanScore = result[0];
     ComputerScore = result[1];
-   
+       
  // final score
  
   if(ComputerScore > HumanScore)

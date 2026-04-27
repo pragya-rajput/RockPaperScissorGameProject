@@ -81,17 +81,17 @@
   document.body.appendChild(PaperButn);
   document.body.appendChild(ScissorButn);
 
-    RockButn.addEventListener(click , function()
+    RockButn.addEventListener("click" , function()
       {
           PlayGame("Rock");                  
       })
 
-     PaperButn.addEventListener(click , function()
+     PaperButn.addEventListener("click" , function()
        {
           PlayGame("Paper");
        })
 
-     ScissorButn.addEventListener(click , function()
+     ScissorButn.addEventListener("click" , function()
        {
            PlayGame("Scissors");
        })

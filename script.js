@@ -81,35 +81,34 @@
   document.body.appendChild(PaperButn);
   document.body.appendChild(ScissorButn);
 
-   let round = 0;
-
-while(round < 6)
-{
     RockButn.addEventListener("click" , function()
       {
           round++;
-          PlayGame("rock" , round);                  
+          PlayGame("rock");                  
       })
 
      PaperButn.addEventListener("click" , function()
        {
         round++;
-          PlayGame("paper" , round);
+          PlayGame("paper");
        })
 
      ScissorButn.addEventListener("click" , function()
        {
           round++;
-           PlayGame("scissors" , round);
+           PlayGame("scissors");
        })
 }
 
-  let result;
+    let result;
+    let round = 0;
 
        function PlayGame(humanSelection , round)
        {
         
-     const computerSelection = GetComputerChoice();
+          round ++;
+        
+         const computerSelection = GetComputerChoice();
      
      // console.log( "you select : " , humanSelection);
      console.log( "computer select : " , computerSelection);
@@ -121,10 +120,11 @@ while(round < 6)
 
     HumanScore = result[0];
     ComputerScore = result[1];
-        
-       }    
+
+       }
+
  // final score
- 
+       
   if(ComputerScore > HumanScore)
   {
      console.log("Computer win the game");

@@ -1,14 +1,4 @@
-
- // function GetHumanChoice()
- //  {
- //      let UserChoice;
-      
- //      UserChoice = prompt("enter choice(any one of that from Rock , Paper and scissor ) : ");
-
- //      return UserChoice.toLowerCase();
-      
- //  }
-   
+ 
     function GetComputerChoice()
   {
     let ComputerChoice;
@@ -56,8 +46,11 @@
          console.log("");
      }
      
-     console.log("your running score : " , UserScore);
-     console.log(" Computer running score : " , ComputerScore);
+     // console.log("your running score : " , UserScore);
+     // console.log(" Computer running score : " , ComputerScore);
+
+    ComputerRunningScore.textContent = "computer score : " +ComputerScore;
+    UserRunningScore.textContent = "Your Score : " +UserScore;
      
      console.log("\n");
      console.log("..........******.........");
@@ -113,9 +106,15 @@
          const computerSelection = GetComputerChoice();
      
      // console.log( "you select : " , humanSelection);
-     console.log( "computer select : " , computerSelection);
+     // console.log( "computer select : " , computerSelection);
      
-      console.log("");
+      // console.log("");
+
+        const ComputerRunningScore = document.createElement("div");
+        document.body.appnedChild( ComputerRunningScore);
+
+        const UserRunningScore = document.createElement("div");
+        document.body.appendChild(UserRunningScore);
      
      result = PlayRound( HumanScore , ComputerScore , round , humanSelection , computerSelection);
        
@@ -129,26 +128,27 @@
 
     if(round === 6)
       {
-       
-  if(ComputerScore > HumanScore)
-  {
-     console.log("Computer win the game");
-     console.log("computer total score : ", result[1]);
-     console.log("Your total score : ", result[0]);
-  }
+       const Winner = document.createElement("ul");
+       document.body.appendChild(Winner);
+         
+       ComputerRunningScore.textContent = "Final computer score : " +result[1];
 
-   else if(ComputerScore == HumanScore)
-   {
-       console.log("Score tie");
-       console.log("Congrats u both are winner" );
-   }
+       UserRunningScore.textContent = "Your Final Score : " +result[0];
+       
+      if(ComputerScore > HumanScore)
+     {
+         Winner.textContent  = "You lost";      
+     }
+
+      else if(ComputerScore == HumanScore)
+     {
+          Winner.textContent = "game tie";
+     }
   
-  else
-  {
-     console.log("You win the game");
-     console.log("Your total score : ", result[0]);
-      console.log("computer total score : ", result[1]);
-  }
+     else
+    {
+        Winner.textContent = "You Win"
+    }
       }
         
      }

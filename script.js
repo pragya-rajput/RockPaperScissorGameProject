@@ -100,6 +100,9 @@
   let result;
 
      let round = 0;
+
+     while(round != 5)
+     {
        function PlayGame(humanSelection)
        {
           round++;
@@ -117,6 +120,7 @@
     ComputerScore = result[1];
         
        }   
+     }
  // final score
  
   if(ComputerScore > HumanScore)

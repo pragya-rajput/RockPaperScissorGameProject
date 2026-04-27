@@ -84,19 +84,16 @@
 
     RockButn.addEventListener("click" , function()
       {
-          round++;
           PlayGame("rock");                  
       })
 
      PaperButn.addEventListener("click" , function()
        {
-        round++;
           PlayGame("paper");
        })
 
      ScissorButn.addEventListener("click" , function()
        {
-          round++;
            PlayGame("scissors");
        })
 

@@ -21,7 +21,7 @@
     return ComputerChoice;
   }
    
-  function PlayRound( UserScore , ComputerScore , UserChoice , ComputerChoice)
+  function PlayRound( UserScore , ComputerScore , round ,UserChoice , ComputerChoice)
   {
       console.log("round : " );
        
@@ -99,8 +99,10 @@
 
   let result;
 
+     let round = 0;
        function PlayGame(humanSelection)
        {
+          round++;
      const computerSelection = GetComputerChoice();
      
      console.log( "you select : " , humanSelection);
@@ -108,7 +110,7 @@
      
       console.log("");
      
-     result = PlayRound( HumanScore , ComputerScore , humanSelection , computerSelection);
+     result = PlayRound( HumanScore , ComputerScore , round , humanSelection , computerSelection);
        
 
     HumanScore = result[0];

@@ -134,6 +134,7 @@
   {
      console.log("Computer win the game");
      console.log("computer total score : ", result[1]);
+     console.log("Your total score : ", result[0]);
   }
 
    else if(ComputerScore == HumanScore)
@@ -146,6 +147,7 @@
   {
      console.log("You win the game");
      console.log("Your total score : ", result[0]);
+      console.log("computer total score : ", result[1]);
   }
       }
         

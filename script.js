@@ -83,17 +83,17 @@
 
     RockButn.addEventListener("click" , function()
       {
-          PlayGame("Rock");                  
+          PlayGame("rock");                  
       })
 
      PaperButn.addEventListener("click" , function()
        {
-          PlayGame("Paper");
+          PlayGame("paper");
        })
 
      ScissorButn.addEventListener("click" , function()
        {
-           PlayGame("Scissors");
+           PlayGame("scissors");
        })
 
 

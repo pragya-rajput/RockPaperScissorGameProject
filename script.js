@@ -13,19 +13,15 @@
    
   function PlayRound( UserScore , ComputerScore , round , UserChoice , ComputerChoice)
   {
-   
-     // console.log("round : " , round );
-       
+  
       if(ComputerChoice == UserChoice)
     {
         console.log("oops game tie");
-         console.log("");
     }
 
     else if(!UserChoice)
     {
         console.log("since u never choose any of this so you lost the game ");
-         console.log("");
          
          ComputerScore = ComputerScore + 1;
     }
@@ -45,9 +41,6 @@
         ComputerScore = ComputerScore + 1;
          console.log("");
      }
-
-    // ComputerRunningScore.textContent = "computer score : " +ComputerScore;
-    // UserRunningScore.textContent = "Your Score : " +UserScore;
      
      console.log("\n");
      console.log("..........******.........");
@@ -87,19 +80,30 @@
            PlayGame("scissors");
        })
 
+       const ScoreContainer  = document.createElement("div");
+
+        ScoreContainer.style.display  = "flex";
+        ScoreContainer.style.justifyContent = "space-between";
+        ScoreContainer.style.width = "300px";
+        ScoreContainer.style.marginTop = "20px";
+
+
         const ComputerRunningScore = document.createElement("div");
-        document.body.appendChild( ComputerRunningScore);
+        ScoreContainer.appendChild( ComputerRunningScore);
 
         const UserRunningScore = document.createElement("div");
-        document.body.appendChild(UserRunningScore);
+        ScoreContainer.appendChild(UserRunningScore);
 
         const Points = document.createElement("div")
-        document.body.appendChild(Points)
+         document.body.appendChild(Points)
+         Points.style.marginTop = "20px";
+         ScoreContainer.style.marginTop = "10px";
 
-      const Winner = document.createElement("ul");
+       const Winner = document.createElement("ul");
        document.body.appendChild(Winner);
-         
-        
+        Winner.style.marginTop = "30px";
+        Winner.style.fontweight = "bold";
+        Winner.style.fontSize = "20px";
 
     let result;
     let round = 0;

@@ -14,7 +14,7 @@
   function PlayRound( UserScore , ComputerScore , round , UserChoice , ComputerChoice)
   {
    
-      console.log("round : " , round );
+     // console.log("round : " , round );
        
       if(ComputerChoice == UserChoice)
     {
@@ -45,12 +45,9 @@
         ComputerScore = ComputerScore + 1;
          console.log("");
      }
-     
-     // console.log("your running score : " , UserScore);
-     // console.log(" Computer running score : " , ComputerScore);
 
-    ComputerRunningScore.textContent = "computer score : " +ComputerScore;
-    UserRunningScore.textContent = "Your Score : " +UserScore;
+    // ComputerRunningScore.textContent = "computer score : " +ComputerScore;
+    // UserRunningScore.textContent = "Your Score : " +UserScore;
      
      console.log("\n");
      console.log("..........******.........");
@@ -90,6 +87,19 @@
            PlayGame("scissors");
        })
 
+        const ComputerRunningScore = document.createElement("div");
+        document.body.appendChild( ComputerRunningScore);
+
+        const UserRunningScore = document.createElement("div");
+        document.body.appendChild(UserRunningScore);
+
+        const Points = document.createElement("div")
+        document.body.appendChild(Points)
+
+      const Winner = document.createElement("ul");
+       document.body.appendChild(Winner);
+         
+        
 
     let result;
     let round = 0;
@@ -101,26 +111,21 @@
          console.log("game over");
          return;
         }
-          round++;
+        
+        round++;
+        Points.textContent = "round :" +round;
         
          const computerSelection = GetComputerChoice();
      
-     // console.log( "you select : " , humanSelection);
-     // console.log( "computer select : " , computerSelection);
-     
-      // console.log("");
-
-        const ComputerRunningScore = document.createElement("div");
-        document.body.appnedChild( ComputerRunningScore);
-
-        const UserRunningScore = document.createElement("div");
-        document.body.appendChild(UserRunningScore);
-     
      result = PlayRound( HumanScore , ComputerScore , round , humanSelection , computerSelection);
-       
 
-    HumanScore = result[0];
-    ComputerScore = result[1];
+      HumanScore = result[0];
+      ComputerScore = result[1];
+
+        ComputerRunningScore.textContent = "computer score : " +ComputerScore;
+        UserRunningScore.textContent = "Your Score : " +HumanScore;
+       
+    
 
        
 
@@ -128,9 +133,7 @@
 
     if(round === 6)
       {
-       const Winner = document.createElement("ul");
-       document.body.appendChild(Winner);
-         
+      
        ComputerRunningScore.textContent = "Final computer score : " +result[1];
 
        UserRunningScore.textContent = "Your Final Score : " +result[0];

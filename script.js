@@ -72,7 +72,15 @@
    const RockButn = document.createElement("button");
    const PaperButn = documnet.createElement("button");
    const ScissorButn = document.createElement("button");
-  
+
+     RockButn.textContent("Rock");
+     PaperButn.textContent("Paper");
+     ScissorButn.textContent("Scissors");                    
+
+  document.body.appendchild(RockButn);
+  document.body.appendchild(PaperButn);
+  document.body.appemdchild(ScissorButn);
+
   let result;
   
      const humanSelection = GetHumanChoice();

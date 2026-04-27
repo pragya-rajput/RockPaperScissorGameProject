@@ -23,7 +23,7 @@
    
   function PlayRound( UserScore , ComputerScore , round ,UserChoice , ComputerChoice)
   {
-      console.log("round : " );
+      console.log("round : " , round );
        
       if(ComputerChoice == UserChoice)
     {

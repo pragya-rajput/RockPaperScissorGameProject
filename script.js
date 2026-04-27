@@ -53,6 +53,27 @@
   let HumanScore = 0;
   let ComputerScore = 0;
 
+       const ScoreContainer  = document.createElement("div");
+
+        ScoreContainer.style.display  = "flex";
+        ScoreContainer.style.justifyContent = "space-between";
+        ScoreContainer.style.width = "300px";
+        ScoreContainer.style.marginTop = "20px";
+        
+         document.body.appendChild(ScoreContainer);
+
+
+        const ComputerRunningScore = document.createElement("div");
+        ScoreContainer.appendChild( ComputerRunningScore);
+
+        const UserRunningScore = document.createElement("div");
+        ScoreContainer.appendChild(UserRunningScore);
+
+        const Points = document.createElement("div")
+         document.body.appendChild(Points)
+         Points.style.marginTop = "20px";
+
+
    const RockButn = document.createElement("button");
    const PaperButn = document.createElement("button");
    const ScissorButn = document.createElement("button");
@@ -79,26 +100,6 @@
        {
            PlayGame("scissors");
        })
-
-       const ScoreContainer  = document.createElement("div");
-
-        ScoreContainer.style.display  = "flex";
-        ScoreContainer.style.justifyContent = "space-between";
-        ScoreContainer.style.width = "300px";
-        ScoreContainer.style.marginTop = "20px";
-        
-         document.body.appenChild(ScoreConatainer);
-
-
-        const ComputerRunningScore = document.createElement("div");
-        ScoreContainer.appendChild( ComputerRunningScore);
-
-        const UserRunningScore = document.createElement("div");
-        ScoreContainer.appendChild(UserRunningScore);
-
-        const Points = document.createElement("div")
-         document.body.appendChild(Points)
-         Points.style.marginTop = "20px";
         
        const Winner = document.createElement("div");
        document.body.appendChild(Winner);

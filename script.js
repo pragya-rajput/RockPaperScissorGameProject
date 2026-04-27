@@ -24,6 +24,9 @@
   function PlayRound( UserScore , ComputerScore , round ,UserChoice , ComputerChoice)
   {
       console.log("round : " , round );
+
+   if (round >5)
+    break;
        
       if(ComputerChoice == UserChoice)
     {

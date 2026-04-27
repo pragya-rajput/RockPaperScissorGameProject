@@ -43,7 +43,7 @@
         || UserChoice == "paper" && ComputerChoice == "rock" 
         || UserChoice == "scissors"&& ComputerChoice == "paper") )
         {
-            console.log("congratulation! You Won the game");
+            console.log("congratulation! You Won that round of game");
             UserScore = UserScore + 1;
              console.log("");
         }
@@ -55,8 +55,8 @@
          console.log("");
      }
      
-     console.log("your score for this round is : " , UserScore);
-     console.log(" Computer score for this round is : " , ComputerScore);
+     console.log("your running score : " , UserScore);
+     console.log(" Computer running score : " , ComputerScore);
      
      console.log("\n");
      console.log("..........******.........");
@@ -105,7 +105,7 @@
           round++;
      const computerSelection = GetComputerChoice();
      
-     console.log( "you select : " , humanSelection);
+     // console.log( "you select : " , humanSelection);
      console.log( "computer select : " , computerSelection);
      
       console.log("");
@@ -115,7 +115,8 @@
 
     HumanScore = result[0];
     ComputerScore = result[1];
-       
+        
+       }   
  // final score
  
   if(ComputerScore > HumanScore)
@@ -123,6 +124,12 @@
      console.log("Computer win the game");
      console.log("computer total score : ", result[1]);
   }
+
+   else if(ComputerScore == HumanScore)
+   {
+       console.log("Score tie");
+       console.log("Congrats u both are winner" );
+   }
   
   else
   {
@@ -130,4 +137,4 @@
      console.log("Your total score : ", result[0]);
   }
   
-       }
+       

@@ -109,7 +109,7 @@
       console.log("");
      
      result = PlayRound( HumanScore , ComputerScore , humanSelection , computerSelection);
-       }
+       
 
     HumanScore = result[0];
     ComputerScore = result[1];
@@ -128,4 +128,4 @@
      console.log("Your total score : ", result[0]);
   }
   
-
+       }

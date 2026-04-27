@@ -53,6 +53,19 @@
   let HumanScore = 0;
   let ComputerScore = 0;
 
+ const RockButn = document.createElement("button");
+   const PaperButn = document.createElement("button");
+   const ScissorButn = document.createElement("button");
+
+     RockButn.textContent = "Rock";
+     PaperButn.textContent = "Paper";
+     ScissorButn.textContent = "Scissors";  
+
+  document.body.appendChild(RockButn);
+  document.body.appendChild(PaperButn);
+  document.body.appendChild(ScissorButn);
+
+
        const ScoreContainer  = document.createElement("div");
 
         ScoreContainer.style.display  = "flex";
@@ -74,17 +87,17 @@
          Points.style.marginTop = "20px";
 
 
-   const RockButn = document.createElement("button");
-   const PaperButn = document.createElement("button");
-   const ScissorButn = document.createElement("button");
+  //  const RockButn = document.createElement("button");
+  //  const PaperButn = document.createElement("button");
+  //  const ScissorButn = document.createElement("button");
 
-     RockButn.textContent = "Rock";
-     PaperButn.textContent = "Paper";
-     ScissorButn.textContent = "Scissors";  
+  //    RockButn.textContent = "Rock";
+  //    PaperButn.textContent = "Paper";
+  //    ScissorButn.textContent = "Scissors";  
 
-  document.body.appendChild(RockButn);
-  document.body.appendChild(PaperButn);
-  document.body.appendChild(ScissorButn);
+  // document.body.appendChild(RockButn);
+  // document.body.appendChild(PaperButn);
+  // document.body.appendChild(ScissorButn);
 
     RockButn.addEventListener("click" , function()
       {
